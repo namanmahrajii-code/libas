@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F7F4EF;
+    color: #1E1E1E;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    letter-spacing: -0.01em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F7F4EF;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #E5DDD3;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c8beb0;
+  }
+}
+
+.marquee-fade {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-page-fade {
+  animation: pageFadeIn 0.35s ease-out forwards;
+}
+
+/* Luxury Light Glass Utilities */
+.glass-nav {
+  background: rgba(247, 244, 239, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid #E5DDD3;
+}
+
+/* Primary Button: Deep Burgundy #7D1E22 */
+.btn-primary, .glass-btn-burgundy {
+  background-color: #7D1E22;
+  color: #FFFFFF;
+  border: 1px solid #7D1E22;
+  box-shadow: 0 4px 14px rgba(125, 30, 34, 0.2);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover, .glass-btn-burgundy:hover {
+  background-color: #942429;
+  border-color: #942429;
+  box-shadow: 0 6px 20px rgba(125, 30, 34, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Secondary Button: Transparent/Cream with Burgundy Border */
+.btn-secondary, .glass-btn-secondary {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #7D1E22;
+  border: 1px solid #7D1E22;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover, .glass-btn-secondary:hover {
+  background-color: #7D1E22;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(125, 30, 34, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Glass Button Light (Cream / White Frosted) */
+.glass-btn-light {
+  background: rgba(255, 255, 255, 0.88);
+  color: #1E1E1E;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #E5DDD3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-btn-light:hover {
+  background: #FFFFFF;
+  border-color: #7D1E22;
+  color: #7D1E22;
+  box-shadow: 0 4px 16px rgba(125, 30, 34, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Glass Dark Button / Active State */
+.glass-btn-dark {
+  background-color: #7D1E22;
+  color: #FFFFFF;
+  border: 1px solid #7D1E22;
+  box-shadow: 0 4px 14px rgba(125, 30, 34, 0.2);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-btn-dark:hover {
+  background-color: #942429;
+  border-color: #942429;
+  box-shadow: 0 6px 20px rgba(125, 30, 34, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Clean White Card */
+.luxury-card, .glass-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5DDD3;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card-dark {
+  background-color: #EFE8DE;
+  border: 1px solid #E5DDD3;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
